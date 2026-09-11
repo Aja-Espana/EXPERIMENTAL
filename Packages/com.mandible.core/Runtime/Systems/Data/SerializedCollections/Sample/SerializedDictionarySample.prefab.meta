@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d5ef987aaa217a443815630d002f7baf
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 243052
+  packageName: Serialized Dictionary
+  packageVersion: 1.0.13
+  assetPath: Assets/Plugins/SerializedCollections/Sample/SerializedDictionarySample.prefab
+  uploadId: 632226

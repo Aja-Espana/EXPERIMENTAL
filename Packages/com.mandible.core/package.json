@@ -1,0 +1,12 @@
+{
+  "name": "com.mandible.core",
+  "version": "0.1.0-preview",
+  "displayName": "Mandible Core Library",
+  "description": "Core library for Mandible packages",
+  "defineConstraints": [
+    {
+      "name": "MANDIBLE_CORE_LIBRARY"
+    }
+  ],
+  "_fingerprint": "9beddc4d469dfe6563d02c246e0da051b5e81300"
+}

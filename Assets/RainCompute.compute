@@ -1,0 +1,138 @@
+#pragma kernel CSMain
+
+struct RainParticle {
+    float3 position;
+    float pad1;
+    float3 velocity;
+    float pad2;
+    float lifetime;
+    float3 pad3;
+};
+
+struct SplashParticle {
+    float4 posAndLife;   
+    float4 metaAndPad;   
+};
+
+struct RoofBox {
+    float3 minBounds;
+    float pad1;
+    float3 maxBounds;
+    float pad2;
+};
+
+RWStructuredBuffer<RainParticle> _ParticleBuffer;
+RWStructuredBuffer<SplashParticle> _SplashBuffer;
+StructuredBuffer<RoofBox> _RoofBoxes;
+
+float _DeltaTime, _RainIntensity, _GroundY, _SplashLifetime;
+float3 _BoundsMin, _BoundsMax;
+uint _RoofBoxCount;
+uint _FrameSeed;
+uint _ParticleCount;
+
+float rand(uint seed) {
+    seed = seed * 0x9e3779b9u + 0x123456u;
+    seed = (seed ^ (seed >> 16)) * 0x85ebca6bu;
+    seed = seed ^ (seed >> 13);
+    return float(seed) / 4294967296.0;
+}
+
+[numthreads(256, 1, 1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    uint idx = id.x;
+    if (idx >= _ParticleCount) return;
+
+    SplashParticle s = _SplashBuffer[idx];
+    if (s.posAndLife.w > 0.0f) {
+        s.posAndLife.w -= _DeltaTime;
+        if (s.posAndLife.w < 0.0f) s.posAndLife.w = 0.0f;
+        _SplashBuffer[idx] = s;
+    }
+
+    RainParticle p = _ParticleBuffer[idx];
+    float speedFactor = (_RainIntensity > 0.0f) ? lerp(0.4f, 1.0f, _RainIntensity) : 0.0f;
+
+    float3 oldPos = p.position;
+    p.position += p.velocity * speedFactor * _DeltaTime;
+    p.lifetime -= _DeltaTime;
+
+    bool collided = false;
+    float3 hitPos = float3(0, 0, 0);
+
+    for (uint i = 0; i < _RoofBoxCount; i++)
+    {
+        RoofBox r = _RoofBoxes[i];
+        if (p.position.x >= r.minBounds.x && p.position.x <= r.maxBounds.x &&
+            p.position.z >= r.minBounds.z && p.position.z <= r.maxBounds.z)
+        {
+            if (max(oldPos.y, p.position.y) >= r.maxBounds.y && min(oldPos.y, p.position.y) <= r.maxBounds.y)
+            {
+                collided = true;
+                hitPos = float3(p.position.x, r.maxBounds.y, p.position.z);
+                break;
+            }
+        }
+    }
+
+    if (!collided && p.position.y <= _GroundY)
+    {
+        collided = true;
+        hitPos = float3(p.position.x, _GroundY, p.position.z);
+    }
+
+    if (collided)
+    {
+        if (_RainIntensity > 0.0f)
+        {
+            SplashParticle newSplash;
+            newSplash.posAndLife = float4(hitPos, _SplashLifetime);
+            newSplash.metaAndPad = float4(_SplashLifetime, 0, 0, 0);
+            _SplashBuffer[idx] = newSplash;
+        }
+
+        uint seed = idx + _FrameSeed * 1973u;
+        float rX = rand(seed);
+        float rZ = rand(seed + 1u);
+        float rY = rand(seed + 2u);   
+        float rL = rand(seed + 3u);
+
+        float height = _BoundsMax.y - _BoundsMin.y;
+        float yPos = _BoundsMax.y - rY * height * 0.02f;
+
+        p.position = float3(
+            lerp(_BoundsMin.x, _BoundsMax.x, rX),
+            yPos,
+            lerp(_BoundsMin.z, _BoundsMax.z, rZ)
+        );
+        p.velocity = float3(0, -25, 0);
+        p.lifetime = lerp(2.0f, 6.0f, rL);
+    }
+    else if (p.lifetime <= 0.0f || _RainIntensity <= 0.0f)
+    {
+        uint seed = idx + _FrameSeed * 1973u;
+        float rX = rand(seed);
+        float rZ = rand(seed + 1u);
+        float rY = rand(seed + 2u);
+        float rL = rand(seed + 3u);
+
+        float height = _BoundsMax.y - _BoundsMin.y;
+        float yPos = _BoundsMax.y - rY * height * 0.02f;
+
+        p.position = float3(
+            lerp(_BoundsMin.x, _BoundsMax.x, rX),
+            yPos,
+            lerp(_BoundsMin.z, _BoundsMax.z, rZ)
+        );
+        p.velocity = float3(0, -25, 0);
+        p.lifetime = lerp(2.0f, 6.0f, rL);
+    }
+
+    if (p.position.x < _BoundsMin.x) p.position.x += (_BoundsMax.x - _BoundsMin.x);
+    if (p.position.x > _BoundsMax.x) p.position.x -= (_BoundsMax.x - _BoundsMin.x);
+    if (p.position.z < _BoundsMin.z) p.position.z += (_BoundsMax.z - _BoundsMin.z);
+    if (p.position.z > _BoundsMax.z) p.position.z -= (_BoundsMax.z - _BoundsMin.z);
+
+    _ParticleBuffer[idx] = p;
+}
