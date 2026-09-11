@@ -1,0 +1,18 @@
+{
+    "name": "Mandible.Core.Data.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8a33b921c6a4a91449b57791aa292d24"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

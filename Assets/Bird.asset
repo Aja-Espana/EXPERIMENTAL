@@ -1,0 +1,1420 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8088188703921234998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdListenCondition
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdListenCondition
+  m_uID: e3bef500f5074d71aae5a6643bf2a153
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 304, y: 640}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &-7161438619747500539
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Idle
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdIdleAction
+  m_uID: 57eefdd67e714e0ba511d485137fdacc
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: -538.5675, y: -109.54274}
+  m_priority: 4
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  minIdleDuration: 2
+  maxIdleDuration: 5
+--- !u!114 &-6741066183600584445
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Tweet to Void
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdTweetVoidAction
+  m_uID: 6bc6f30fd4fc454f9ab01878cb66d3f3
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 400.66998, y: 678.4801}
+  m_priority: 6
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  tweetPatternId: Pattern_A
+  broadcastRadius: 12
+  birdLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  tweetClips:
+  - {fileID: 8300000, guid: 50155655c91a89d4886c00f3173d8bc3, type: 3}
+  - {fileID: 8300000, guid: c3638c55823c16941a50bed72cdd48a1, type: 3}
+  - {fileID: 8300000, guid: 107a51761616f9a438d81798a30efefb, type: 3}
+  - {fileID: 8300000, guid: 68df5eee09d2dc043bbe48a1cd833f2c, type: 3}
+--- !u!114 &-6441097013492709931
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdTweetVoidAction
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdTweetVoidAction
+  m_uID: aa79e524d9b34846bfdffa2f676ed4ff
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 640, y: 656}
+  m_priority: 7
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  tweetPatternId: Pattern_A
+  broadcastRadius: 12
+  birdLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  tweetClips: []
+--- !u!114 &-6386436169483923024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Respond to Tweet
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdRespondAction
+  m_uID: f1b8453b23c54211abbd485ef1e08667
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 265.86996, y: -97.12544}
+  m_priority: 9
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &-6290910224908701775
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd734f4ac05fb14b93d9b05ddf30daa, type: 3}
+  m_Name: BirdTweetVoidAction
+  m_EditorClassIdentifier: Assembly-CSharp::Game.AI.Birds.BirdTweetVoidAction
+  m_uID: 126b8c81007b4310a5ae7850ef4a12dd
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 400, y: 672}
+  m_priority: 6
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  tweetPatternId: Pattern_A
+  broadcastRadius: 12
+  birdLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  tweetClips:
+  - {fileID: 8300000, guid: 50155655c91a89d4886c00f3173d8bc3, type: 3}
+  - {fileID: 8300000, guid: c3638c55823c16941a50bed72cdd48a1, type: 3}
+  - {fileID: 8300000, guid: 107a51761616f9a438d81798a30efefb, type: 3}
+  - {fileID: 8300000, guid: 68df5eee09d2dc043bbe48a1cd833f2c, type: 3}
+--- !u!114 &-5818676182408968434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Respond to Tweet
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdRespondAction
+  m_uID: 0e576431ca3f430b876ab8dab9928c35
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 448.6824, y: -104.87772}
+  m_priority: 9
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &-5373862652283020892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Idle
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdIdleAction
+  m_uID: 07bf88c4cc314ddda22e9d8768da777b
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 256, y: 688}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  minIdleDuration: 2
+  maxIdleDuration: 5
+--- !u!114 &-4848584581680411354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdRespondAction
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdRespondAction
+  m_uID: 60cf92af5c2744a0a2877cf8d6785315
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 239.17519, y: 1029.9402}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &-4389882835946271647
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016fbbd584620f64ab35ac6745c7564a, type: 3}
+  m_Name: Root
+  m_EditorClassIdentifier: Schema::Schema.Root
+  m_uID: f2f0c2524a0e44dc8c26e54b01bfa172
+  m_parent: {fileID: 0}
+  m_children:
+  - {fileID: 9151530765875398679}
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 524.64246, y: 0}
+  m_priority: 1
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+--- !u!114 &-3847497573709813429
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Listen For Tweets
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdListenCondition
+  m_uID: 496b1d3c9f87482585a8152a5997f652
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 624.45996, y: 678.4801}
+  m_priority: 8
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &-3436696601766554758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d4399c7cbc79f4ca7be2fe4a2d37da, type: 3}
+  m_Name: BirdMoveAction
+  m_EditorClassIdentifier: Assembly-CSharp::Game.AI.Birds.BirdMoveAction
+  m_uID: bd06291ffc0441fe85f2df2089ba6285
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 191.78, y: 678.48}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  arrivalThreshold: 2
+  targetPositionEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue: {x: 0, y: 0, z: 0}
+--- !u!114 &-2807911715894758267
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05d660b9cc094d4da1ff6d8f095c3c7, type: 3}
+  m_Name: BirdListenCondition
+  m_EditorClassIdentifier: Assembly-CSharp::Game.AI.Birds.BirdListenCondition
+  m_uID: d32ecce0643648928ebf10a044c53078
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 637.56, y: 678.48}
+  m_priority: 8
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &-2555852651092566135
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdTweetVoidAction
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdTweetVoidAction
+  m_uID: 7d8feaf479124d4b8d1edd0fd15185ac
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 368, y: 688}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  tweetPatternId: Pattern_A
+  broadcastRadius: 12
+  birdLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  tweetClips: []
+--- !u!114 &-1329802520341756678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Tweet to Void
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdTweetVoidAction
+  m_uID: 8a4a8689ab5b4cc2955d1b47ed029db0
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 400, y: 672}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  tweetPatternId: Pattern_A
+  broadcastRadius: 12
+  birdLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  tweetClips: []
+--- !u!114 &-1102708385590865099
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Tweet to Void
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdTweetVoidAction
+  m_uID: 7cd693974ff049db9e3e3eae73bdc6a1
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 400, y: 688}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  tweetPatternId: Pattern_A
+  broadcastRadius: 12
+  birdLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  tweetClips: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c607c09a2416a2429d2729cde80bcab, type: 3}
+  m_Name: Bird
+  m_EditorClassIdentifier: Schema::Schema.Graph
+  m_root: {fileID: -4389882835946271647}
+  m_blackboard: {fileID: 7682976189677462809}
+  m_nodes:
+  - {fileID: -4389882835946271647}
+  - {fileID: 8135659574983567591}
+  - {fileID: 8412921555817662743}
+  - {fileID: 5196740277818733461}
+  - {fileID: -3436696601766554758}
+  - {fileID: -6290910224908701775}
+  - {fileID: -2807911715894758267}
+  - {fileID: 1636820684090448554}
+  - {fileID: 9151530765875398679}
+  m_zoom: 1.6599998
+  m_pan: {x: -592.5729, y: -422.12268}
+--- !u!114 &72417319270440561
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdListenCondition
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdListenCondition
+  m_uID: 5f95e7a575c44819bc8e75c0879d6a6c
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 960, y: 672}
+  m_priority: 8
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &115344991473957924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Listen For Tweets
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdListenCondition
+  m_uID: 60516665ab3a459d81f26b6c11cb07cb
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 336, y: 672}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &821239228897941792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Tweet to Void
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdTweetVoidAction
+  m_uID: ae0a6f96e569405b943c5223217b331c
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: -318.56494, y: -93.420555}
+  m_priority: 6
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  tweetPatternId: Pattern_A
+  broadcastRadius: 12
+  birdLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  tweetClips: []
+--- !u!114 &938480331730631707
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Tweet to Void
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdTweetVoidAction
+  m_uID: c545bd7b914740e195bf14d8ba4da864
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 352, y: 688}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  tweetPatternId: Pattern_A
+  broadcastRadius: 12
+  birdLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  tweetClips: []
+--- !u!114 &1233542101848180604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdRespondAction
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdRespondAction
+  m_uID: 135bc3bbb6ba45b1a5951166ec0919d1
+  m_parent: {fileID: 0}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 568.71765, y: 446.03775}
+  m_priority: 0
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &1282304840465924177
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Tweet to Void
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdTweetVoidAction
+  m_uID: a5dc8a74bc8944b98d32d22d71b04d51
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 368, y: 672}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  tweetPatternId: Pattern_A
+  broadcastRadius: 12
+  birdLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  tweetClips: []
+--- !u!114 &1636820684090448554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce4c74909c152074b9595e01640c6bd6, type: 3}
+  m_Name: BirdRespondAction
+  m_EditorClassIdentifier: Assembly-CSharp::Game.AI.Birds.BirdRespondAction
+  m_uID: 1ca9e800866242d2810fb94b55476961
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 869.48, y: 678.48}
+  m_priority: 9
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &1678101210876493153
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fbd8fe71868764581e7677607c2272, type: 3}
+  m_Name: BirdMoveAction
+  m_EditorClassIdentifier: Assembly-CSharp::Game.AI.Birds.BirdMoveAction
+  m_uID: 8b8fdfc8ca8447dab9cb95cacf885e64
+  <description>k__BackingField: 
+  <category>k__BackingField: 
+  <icon>k__BackingField: {fileID: 0}
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 688, y: 656}
+  m_priority: 6
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  moveSpeed: 3
+  rotationSpeed: 10
+  arrivalThreshold: 0.5
+--- !u!114 &2406034529636101897
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fbd8fe71868764581e7677607c2272, type: 3}
+  m_Name: Bird/Move to Location
+  m_EditorClassIdentifier: Assembly-CSharp::Game.AI.Birds.BirdMoveAction
+  m_uID: c10865880483414685387e95db85bcdd
+  <description>k__BackingField: 
+  <category>k__BackingField: 
+  <icon>k__BackingField: {fileID: 0}
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: -48, y: 640}
+  m_priority: 4
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  moveSpeed: 2
+  rotationSpeed: 5
+  arrivalThreshold: 0.5
+--- !u!114 &4136857371496854099
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdListenCondition
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdListenCondition
+  m_uID: 4abbb803a1044a949569f3f8e2b2a680
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 587.32513, y: 935.08527}
+  m_priority: 6
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &4462047942476280356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Idle
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdIdleAction
+  m_uID: f6c19d854c4e42e9839031512cf42eb4
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 248.79999, y: 678.4801}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  minIdleDuration: 2
+  maxIdleDuration: 5
+--- !u!114 &4639332748524455208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdListenCondition
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdListenCondition
+  m_uID: 87169a9e8a86490db2bc931d525674e5
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 80, y: 784}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &5196740277818733461
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96163846c14449448936871bdedf8b8e, type: 3}
+  m_Name: BirdIdleAction
+  m_EditorClassIdentifier: Assembly-CSharp::Game.AI.Birds.BirdIdleAction
+  m_uID: f7d3340b7c994c96bc05590099973320
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 0, y: 678.48}
+  m_priority: 4
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  minIdleDuration: 2
+  maxIdleDuration: 5
+--- !u!114 &5344086946481525268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Respond to Tweet
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdRespondAction
+  m_uID: 7e0fe165767f4a28acfe267d695e9223
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 875.88995, y: 678.4801}
+  m_priority: 9
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &5704491683860548510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdListenCondition
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdListenCondition
+  m_uID: f433bc4b75da424bbded8da4a5ebb18b
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 896, y: 976}
+  m_priority: 7
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &5834843767586449765
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Listen For Tweets
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdListenCondition
+  m_uID: 59a5c35ab025489c89ef1759f0c94411
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 848, y: 656}
+  m_priority: 7
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &6041520661400652938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Tweet to Void
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdTweetVoidAction
+  m_uID: a8095e65099d495cb342ab43825e0e55
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: -112.69252, y: -106.43273}
+  m_priority: 6
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  tweetPatternId: Pattern_A
+  broadcastRadius: 12
+  birdLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  tweetClips: []
+--- !u!114 &6114113592037515549
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdListenCondition
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdListenCondition
+  m_uID: 11b96fc30e8d4fbb87f1bd1d0c728ab5
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 336, y: 768}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &6336467142542087029
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Listen For Tweets
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdListenCondition
+  m_uID: 2d0a6fc0cbb24578b15d7a52d730f4fa
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: -6.594986, y: -97.125435}
+  m_priority: 8
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &6433374626763784898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Idle
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdIdleAction
+  m_uID: a6fe80a7fb7b49d5a1637ff852042832
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: -735.1449, y: -93.42055}
+  m_priority: 4
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  minIdleDuration: 2
+  maxIdleDuration: 5
+--- !u!114 &6752071371671500019
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdIdleAction
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdIdleAction
+  m_uID: 4e625780d9b340a4a9b22dd462e96e37
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 384, y: 672}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  minIdleDuration: 2
+  maxIdleDuration: 5
+--- !u!114 &6964780769012768674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdRespondAction
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdRespondAction
+  m_uID: a1cbf20f2e6d4f4d9af4d72d9054ef64
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 928, y: 672}
+  m_priority: 7
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &7682976189677462809
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9042a5d800cc5cc4f9c3d1dcbff35439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Schema::Schema.Internal.Blackboard
+  m_entries: []
+--- !u!114 &7959358622947440614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdTweetVoidAction
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdTweetVoidAction
+  m_uID: 7784dd51f5e84712bd0cfb7385d2d92b
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 336, y: 704}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  tweetPatternId: Pattern_A
+  broadcastRadius: 12
+  birdLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  tweetClips: []
+--- !u!114 &8135659574983567591
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972b97b1854464e439aae113342e6a4f, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: Schema::Schema.Builtin.Nodes.Sequence
+  m_uID: 0726d472863c4717b970b21a76f1b42b
+  m_parent: {fileID: 9151530765875398679}
+  m_children:
+  - {fileID: -2807911715894758267}
+  - {fileID: 1636820684090448554}
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 786.7225, y: 426.32}
+  m_priority: 7
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+--- !u!114 &8265590359229591574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bird/Listen For Tweets
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdListenCondition
+  m_uID: 911ef3a350f141eeb59188edefe7d4be
+  m_parent: {fileID: 8135659574983567591}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 167.38245, y: -104.87775}
+  m_priority: 8
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &8412921555817662743
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772e2600681415229add623ebd05f1f4, type: 3}
+  m_Name: Select Random Weighted
+  m_EditorClassIdentifier: Schema::Schema.Builtin.Nodes.SelectRandomWeighted
+  m_uID: ce80b20838924ac8932855a81825f6e2
+  m_parent: {fileID: 9151530765875398679}
+  m_children:
+  - {fileID: 5196740277818733461}
+  - {fileID: -3436696601766554758}
+  - {fileID: -6290910224908701775}
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 170.94249, y: 426.32}
+  m_priority: 3
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  weights:
+    keys:
+    - f7d3340b7c994c96bc05590099973320
+    - bd06291ffc0441fe85f2df2089ba6285
+    - 126b8c81007b4310a5ae7850ef4a12dd
+    values: 030000000300000001000000
+--- !u!114 &8682124748182338728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdTweetVoidAction
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdTweetVoidAction
+  m_uID: f5a4d58da03643948f57b831d5d932f0
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 368, y: 672}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  tweetPatternId: Pattern_A
+  broadcastRadius: 12
+  birdLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  tweetClips: []
+--- !u!114 &8718484328260038904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BirdListenCondition
+  m_EditorClassIdentifier: Assembly-CSharp:Game.AI.Birds:BirdListenCondition
+  m_uID: 4ab0602927754db095c60ccc2f7239e2
+  m_parent: {fileID: 8412921555817662743}
+  m_children: []
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 432, y: 656}
+  m_priority: 5
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1
+  interceptedMessageEntry:
+    m_entry: {fileID: 0}
+    m_valuePath: 
+    m_dynamicName: 
+    m_isDynamic: 0
+    m_filters:
+    - BirdMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_valueTypeString: 
+    m_inspectorValue:
+      actionType: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      groupID: 0
+      urgency: 0
+--- !u!114 &9151530765875398679
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972b97b1854464e439aae113342e6a4f, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: Schema::Schema.Builtin.Nodes.Sequence
+  m_uID: aeda6423d7654210adfe3c71deca3e8d
+  m_parent: {fileID: -4389882835946271647}
+  m_children:
+  - {fileID: 8412921555817662743}
+  - {fileID: 8135659574983567591}
+  m_conditionals: []
+  m_modifiers: []
+  m_graphPosition: {x: 505.67743, y: 174.16}
+  m_priority: 2
+  m_graph: {fileID: 11400000}
+  m_comment: 
+  m_enableStatusIndicator: 1

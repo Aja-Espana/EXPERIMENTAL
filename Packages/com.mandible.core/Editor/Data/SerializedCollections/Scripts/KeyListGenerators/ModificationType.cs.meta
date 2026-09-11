@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 49014b451d99b5d4a9d4f33d588957e1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 243052
+  packageName: Serialized Dictionary
+  packageVersion: 1.0.13
+  assetPath: Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/ModificationType.cs
+  uploadId: 632226

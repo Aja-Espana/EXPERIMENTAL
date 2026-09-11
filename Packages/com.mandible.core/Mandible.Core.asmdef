@@ -1,0 +1,23 @@
+{
+    "name": "Mandible.Core",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8a33b921c6a4a91449b57791aa292d24",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.mandible.core",
+            "expression": "0.0.0",
+            "define": "MANDIBLE_CORE_LIBRARY"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 51327d444c957584f91f71297e795a84
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 243052
+  packageName: Serialized Dictionary
+  packageVersion: 1.0.13
+  assetPath: Assets/Plugins/SerializedCollections/Editor/Mandible.Core.Data.Editor.asmdef
+  uploadId: 632226

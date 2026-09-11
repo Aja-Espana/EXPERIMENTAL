@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a0b19e6c3843a204196bf6e717de72bb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 243052
+  packageName: Serialized Dictionary
+  packageVersion: 1.0.13
+  assetPath: Assets/Plugins/SerializedCollections/Runtime/Scripts/SerializedCollectionsUtility.cs
+  uploadId: 632226
